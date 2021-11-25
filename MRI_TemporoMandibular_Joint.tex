@@ -1,10 +1,14 @@
-\documentclass[10pt,twocolumn,a4paper]{article}
+\documentclass[leqno,10pt,twocolumn,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{units}
 \graphicspath{ {./images4TheBook} }
 %\usepackage{showframe}
 \usepackage{lipsum}
 \usepackage{fancyhdr}
+\pagestyle{fancy}
 \begin{document}
 	\begin{titlepage}
 		\begin{center}
@@ -19,6 +23,11 @@
 		\end{center}
 	\end{titlepage}
 	\onecolumn
+	\thispagestyle{plain}
+	\pagenumbering{roman}
+	\tableofcontents
+	\newpage
+	\thispagestyle{plain}
 	\begin{flushleft}
 		\vspace*{3cm}\hspace{3cm}\parbox[center]{10cm}{Ai nostri mentori, che ci hanno indicato la via che ci ha portato verso la parte migliore di noi stessi\\ Alle nostre famiglie, mariti e ai nostri bambini Francesco, Chiara, Benedetta e Greogorio Oceano\\
 									Ai nostri pazienti, per aver riposto fiducia in noi e per averci dato la possibilità di imparare cose nuove ogni giorno\\ Ai nostri amici e colleghi\\ A noi stessi, poichè condividere così tanto ci ha fatto fare 
@@ -32,7 +41,10 @@
 	
 	\newpage
 	
-	\textbf{\Large{Prefazione di Ambra Michelotti}}\\
+	\thispagestyle{plain}
+	
+	\addcontentsline{toc}{section}{Prefazione di Ambra Michelotti}
+	\section*{Prefazione di Ambra Michelotti}
 	
 	\vspace*{0.5cm}
 	Questo libro editato da Tiziana Robba, Carlotta Tanteri e Giulia Tanteri ha il grande merito, il quale non è scontato, di riuscire a colmare uno spazio nel materiale informativo in ambito medico-odontoiatrico. La crescente ricerca in termini diagnostici ed approcci
@@ -49,7 +61,10 @@
 	
 	\newpage
 	
-	\textbf{\Large{Prefazione di Daniele Regge}}\\
+	\thispagestyle{plain}
+	
+	\addcontentsline{toc}{section}{Prefazione di Daniele Regge}
+	\section*{Prefazione di Daniele Regge}
 	
 	\vspace*{0.5cm}
 	In questo volume, dott.ssa Tiziana Robba, dott.ssa Carlotta Tanteri e dott.ssa Giulia Tanteri forniscono una panoramica completa sui disturbi dell'articolazione temporomandibolare (ATM) ed il ruolo della risonanza magnetica (MRI) nelle diagnosi di esse.
@@ -65,7 +80,10 @@
 	
 	\newpage
 	
-	\textbf{\Large{Prefazione di Florencio Monje}}\\
+	\thispagestyle{plain}
+	
+	\addcontentsline{toc}{section}{Prefazione di Florencio Monje}
+	\section*{Prefazione di Florencio Monje}
 	
 	\vspace*{0.5cm}
 	È un grande onore e privilegio collaborare per questo testo scrivendo la prefazione. I redattori hanno formato un team stimolante tramite una combinazione di specialità differenti, concentrate nella diagnosi e trattamento di queste patologie, come
@@ -82,7 +100,10 @@
 	
 	\newpage
 	
-	\textbf{\Large{Prefazione}}\\
+	\thispagestyle{plain}
+	
+	\addcontentsline{toc}{section}{Prefazione}
+	\section*{Prefazione}
 	
 	\vspace*{0.5cm}
 	Questo libro è il risultato di una cooperazione duratura fra un radiologo, un chirurgo maxillofacciale ed un dentista che si è specializzato nelle patologie dell'articolazione temporomandibolare nel corso degli anni. È grazie al nostro costante scambio
@@ -100,8 +121,96 @@
 		Tiziana Robba\\ Carlotta Tanteri \\ Giulia Tanteri
 	\end{flushright}
 	
+	\newpage
+	\thispagestyle{plain}
 	
-
+	\addcontentsline{toc}{section}{Ringraziamenti}
+	\section*{Ringraziamenti}
+	
+	\vspace*{0.5cm}
+	Vorremmo ringraziare gli autori che hanno contribuito a questo libro per la loro dedizione e sforzo per il materiale di alta qualità che hanno fornito.\par Grazie a Gino Carnazza e il Dr. Eugenio Tanteri, i nostri mentori. Grazie per averci dato
+	la possibilità di scrivere questo testo. Avete altruisticamente mosso un passo indietro e ci avete permesso di fare ciò per conto nostro. Grazie per averci inseganto, ispirato e condiviso il vostro sapere e grazie per il costante supporto.
+	\par Grazie Prof. Gregor Slavicek per averci dato la possibilità di imparare, studiare e crescere con te. \par Grazie a tutti i colleghi che hanno contribuito con illustrazioni e immagini radiologiche. Grazie Dr. Angelo Bracco e al Dr. Nicolò
+	Margolo per i notevoli disegni anatomici. \par Vorremo ringraziare le nostre madri e padri per averci dato la necessaria tranquillità per attraversare i momenti difficili e per averci sempre coperto le spalle. \par Grazie ai nostri mariti e 
+	figli poichè siamo state benedette dalla vostra presenza nelle nostre vite. Grazie dal profondo dei nostri cuori per il vostro supporto e per la vostra pazienza. \par Infine Grazie ai dottori, tecnici, staff, infermieri e buoni amici che lavorano
+	con noi giornalmente. Grazie per il costante scambio di conoscenze, interrogandoci e trascorrendo le vostre vite con noi.
+	
+	\newpage
+	
+	\pagenumbering{arabic}
+	\twocolumn
+	\fancyhead[L]{1 Risonanza magnetica dell'ATM: Considerazioni tecniche}
+	\fancyhead[R]{V. Clementi e T. Robba}
+	\begin{flushleft}
+		\section{Risonanza Magnetica dell'ATM: Considerazioni Tecniche}
+	\end{flushleft}
+	\textbf{Punti chiave}\\
+	\begin{itemize}
+		\item La risonanza magnetica è una tecnica di imaging multiparametrica basata sull'assorbimento di energia da parte dei nuclei atomici dei tessuti ed il successivo ritorno del sistema al suo stato iniziale. Affinchè avvenga, il paziente
+		dev'essere inserito in dei campi magnetici appositamente generati e vengono utilizzate della radiazioni elettromagnetiche non-ionizzanti.
+		\item I principali parametri di contrasto utilizzatio per la generazione di immagini sono: densità protonica, $T_1$ e $T_2$. Questi ultimi due sono parametri intrinseci di qualunque tessuto, relativi alla loro struttura microscopica, i 
+		quali influenzano il modo in cui il sistema ritorna al suo equilibrio dopo l'assorbimento di energia a radiofrequenza (RF). L'incrocio di parametri può disporre un'ampia variazione di contrasto fra tessuti, ed è scelto in base al contesto 
+		clinico.
+		\item Le immagini sono generate tramite una succesioni di impulsi di radiofrequenza e campi magnetici mutevoli. Vi sono due tipi di sequenze: spin echo e gradient echo. Le sequenze spin echo sono le più utilizzate poichè forniscono
+		dei dettagli anatomici di qualità, grazie al loro SNR. Le sequenze gradient echo sono utilizzate per diminuire i tempi di acquisizione, sono più sensibili ai cambiamenti della predisposizione magnetica dei tessuti, e possono fornire 
+		informazioni riguardo depositi come quelli di Calcio o emosiderina.
+		\item La MRI è una tecnica di imaging tomografica: rappresenta volumi di regioni anatomiche attraverso immagini 2D. La MR, a differenza di altre tecniche di imaging , può direttamente acquisire lungo piani obliqui. Acquisizioni
+		3D sono inoltre possibili, permettendo una costruzione 3D isotropica del volume.
+		\item Nel corso degli anni, sistemi clinici a risonanza magnetica hanno offerto un crescente numero di sequenze e tecniche, molte delle quali sono pensate per ridurre i tempi acquisizione attraverso modalità differenti di 
+		acquisizione dei dati (tecniche ad acquisizione veloce) e della soppressione del fat-signal (tecniche di soppressione fat-signal).
+		\item La MR non usa radiazioni ionizzanti è può perciò essere considerata una tecnica a basso rischio. Tuttavia, la MR può lo stesso comportare dei rischi per operatori e pazienti, e possono essere limitati attraverso aree designate
+		e procedura di sicurezza applicate nella pratica quotidiana.
+	\end{itemize}
+	\subsection{Introduzione}
+	L'imaging dell'articolazione temporomandibolare (ATM) è stato in costante evoluzione insieme all'avanzamento delle tecnologie di imaging. Nonostante molte modalità di imaging siano attualmente in uso per l'esaminazione dell'ATM (per
+	esempio tomografia computerizzata cone beam --CBCT-- e tomografia computerizata multidetector --MDCT--), l'uso dell'imaging a risonanza magnetica è aumentato grazie alla sua grande risoluzione di contrasto, la sua forza 
+	nell'evidenziare strutture di tessuto molle e segni di infiammazione e la sua capacità di acquisizione di imaging dinamico per dimostrare la funzionalità dell'articolazione (Bag et al. 2014). Oltretutto, la MRI non comporta l'utilizzo di radiazioni
+	ionizzanti e questo aiuta nella limitazione all'esposizione del paziente (Niraj et al 2016). D'altro canto, i relativi svantaggi della MRI in confronto alla CT includono tecnica di scansione più complessa e dei tempi di acquisizione piu lunghi.
+	I vantaggi della CT in confronto alla MRI sono: dettagli ossei migliori ed una valutazione 3D di patologie dello sviluppo, congenite e traumatiche (Bag et al 2014; Niraj et al. 2016). In questo capitolo, il lettore otterrà le informazioni
+	essenziali per comprendere i principi fisici che stanno alla base della creazione di immagini MR.
+	\subsection{Principi fisici dell'imaging a risonanza magnetica}
+	\subsubsection{Nucleo e spin} 	
+	La tecnica di imaging MR è basata sull'assorbimento di energia dai nuclei atomici seguito da un ritorno del sistema al suo stato iniziale. In particolare, la maggior parte della applicazioni cliniche della MR sono 
+	basate su nuclei di idrogeno, infatti, esso è uno degli elementi più comuni in natura e molto
+	abbondante nel corpo umano.\par Gli atomi sono caratterizzati da tre principali particelle: protoni, che hanno una carica positiva, neutroni, che non hanno carica ed elettroni, i quali hanno una carica negativa. \par Il nucleo
+	atomico è caricato positivamente a causa della presenza dei protoni e dei neutroni. Gli elettroni sono sparsi in orbitali che circondano il nucleo. Ogni elemento è definito tipicamente da un numero di protoni ed elettroni,
+	mentre il nucleo può contenere un numero variabile di neutroni caratterizzando in tal modo isotopi differenti dello stesso elemento. Il nucleo di idrogeno contiene un singolo protone e nessun neutrone (Fig. 1.1).
+	\par La completa comprensione del fenomeno della MR è basato sulla teoria della meccanica quantistica, il modello più completo per l'interpretazione del mondo microscopico. Tuttavia, la meccanica quantistica è di solito
+	molto lontana dalla nostra interpretazione intuitiva, che è basata sull'esperienza macroscopica del mondo e descritta attraverso modelli fisici classici. Per questa ragione, è comune utilizzare dei concetti di meccanica
+	quantistica, insieme a modelli meccanici classici, per spiegare e capire meglio certi aspetti della MR. \par Il nucleo atomico ha la proprietà intrinseca della rotazione sul proprio asse, come una trottola. La quantità fisica
+	che descrive questa particolarità è un vettore chiamato \textit{spin momento angolare}, anche chiamato \textit{spin} (Fig. 1.2a). Dalla fisica dell'elettromagnetismo, è anche noto che una carica in movimento crea un 
+	campo magnetico. La fonte di questo campo magnetico può essere rappresentata in fisica attraverso un dipolo, esso può essere immaginato come un piccolo magnete, con un polo nord ed un polo sud. Quindi un nucleo
+	può essere rappresentato come una trottola data la sua rotazione attorno al proprio asse, così come un piccolo magnete dato il suo piccolo campo magnetico (Fig. 1.2b). I piccoli dipoli, sono all'origine del segnale MR.
+	\par Basandoci su quello che è appena stato descritto, un volume di tessuto di un paziente può essere immaginato come un gruppo di piccoli magneti, tutti nuclei di idrogeno (o spins), ognuno di loro ruota attorno al proprio
+	asse generando una microscopica calamita. In condizioni normali, al di fuori di un forte campo magnetico, ogni orientamento dello spin è possibile, i campi magnetici generati dal nucleo si annullano a vicenda e l'effetto
+	complessivoè che non vi è sorta di magnetizzazione sul tessuto (Fig. 1.3).
+	\subsubsection{Il Fenomeno della Risonanza e la Precessione di Larmor}
+	Quando il paziente viene introdotto dentro una divisa e ad un costante campo magnetico ad alta intensità, appositamente creato all'interno dello scanner MR, chiamato $\boldsymbol{B_0}$, l'idrogeno ruota, il quale era
+	orientato in modo casuale fino a quel punto, si muove per allinearsi lungo il principale campo magnetico $\boldsymbol{B_0}$ in un orientamento parallelo o anti-parallelo (Fig. 1.4). L'allineamento anti-parallelo comporta 
+	un'energia superiore a differenza di quello parallelo e quest'ultimo è più frequente. Nei modelli di fisica classica, se una trottola viene spostata dal proprio asse mentre ci gira, comincerà pure a ruotare attorno la direzione della gravità. 
+	Di nuovo, lo spin può essere considerato come una trottola, e quando lo spin è esposto ad un campo magnetico $\boldsymbol{B_0}$ si comporta come una trottola sul campo gravitazionale ed incomincia a ruotare attorno
+	l'asse di $\boldsymbol{B_0}$ con moto caratteristico noto come \textit{precessione} (Fig. 1.5). \par L'equazione di Larmor descrive la relazione fra l'intensità del campo magnetico $\boldsymbol{B_0}$ e la frequenza di 
+	rotazione della precessione di spin:
+	\begin{equation}
+		\omega_0=\gamma B_0
+	\end{equation}
+	dove $\omega_0$ è nota come la frequenza della precessione di Larmor o frequenza di risonanza ed è espressa in MHz, $\gamma$ è il rapporto giromagnetico (unico per ciascun atomo), espresso in MHz/T e $B_0$ è 
+	l'intensità del campo magnetico misurato in Tesla. \par I protoni hanno un rapport giromagnetico di 42.58 MHz/T, e la corrispondente frequenza di Larmor a 1.5 T è 63.87 MHz. Questo valore può essere approssimato
+	intorno ad 1 KHz, il quale è la frequenza Larmor corrispondente all'intensità del campo magnetico della terra. \par Come conseguenza di quanto appena descritto, ogni qualvolta che un paziente è portato all'interno di un
+	campo magnetico esterno, l'effetto complessivo è l'apparizione di una magnetizzazione microscopica che può essere rappresentata da un vettore \textbf{M}, con la stessa direzione e verso del campo magnetico esterno
+	$\boldsymbol{B_0}$ (Fig. 1.6). Non vi è nessun vettore di magnetizzazione quando un tessuto non è posizionato in un campo magnetico esterno. \par Da un punto di vista meccanico-quantistico, quando la componente 
+	spin è misurata lungo l'asse un asse (l'asse $z$ per esempio) è possibile ottenere solamente un numero finito di valori (valori quantizzati), relativi ad un numero che descrive il momento angolare dello spin: il numero 
+	quantico di spin $I$. Questo numero differisce da nucleo a nucleo. Nuclei con un numero quantico di spin $I=0$ non possono essere utilizzati per la MR. Il nucleo di idrogeno ha il numero quantico di spin $I=\nicefrac{1}{2}$,
+	il quale lo rende adatto per la creazione di un segnale MR. Altri nuclei, per esempio Carbonio-13, Azoto-14, Fluoro-19, Fosforo-31 e Sodio-23 sono caratterizzati da un $I\neq 0$ e possono potenzialmente generare 
+	segnale MR. Tuttavia, questi elementi sono meno abbondanti nei tessuti biologici in confronto all'idrogeno; Pertanto il loro uso nella MRI non è uno standard ed è limitato solo a specifiche applicazioni di ricerca.
+	\par Al di fuori del campo $\boldsymbol{B_0}$, quando si misura il componente dello spin del nucleo lungo l'asse $z$, gli unici posiibili risultati sono due valori, corrispondenti agli stati dello spin UP e DOWN, entrambi
+	avendo la stessa energia. Il numero di spin UP è equivalente al numero degli spin DOWN e non vi è alcun effetto macroscopico. Al contrario, quando un paziente viene inserito nel campo magnetico principale $\boldsymbol{B_0}$,
+	le due possibili configurazioni dello spin dell'idrogeno --rispetto all'asse di $\boldsymbol{B_0}$, UP (anti-parallelo) o DOWN (parallelo)-- diventano energicamente differenti, con l'allineamento UP corrispondente allo stato
+	energetico superiore (Fig. 1.7). La distribuzione dei vari spin, fra stati d'energia UP e DOWN, non è più uguale ed è collegato al movimento termico microscopico all'interno del tessuto ed alla intensità del campo magnetico 
+	esterno $\boldsymbol{B_0}$. A temperatura corporea e con il tipico campo magnetico esterno usato nella clinica pratica  
+	
+	
+	
 
 
 
