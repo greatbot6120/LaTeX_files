@@ -207,7 +207,179 @@
 	avendo la stessa energia. Il numero di spin UP è equivalente al numero degli spin DOWN e non vi è alcun effetto macroscopico. Al contrario, quando un paziente viene inserito nel campo magnetico principale $\boldsymbol{B_0}$,
 	le due possibili configurazioni dello spin dell'idrogeno --rispetto all'asse di $\boldsymbol{B_0}$, UP (anti-parallelo) o DOWN (parallelo)-- diventano energicamente differenti, con l'allineamento UP corrispondente allo stato
 	energetico superiore (Fig. 1.7). La distribuzione dei vari spin, fra stati d'energia UP e DOWN, non è più uguale ed è collegato al movimento termico microscopico all'interno del tessuto ed alla intensità del campo magnetico 
-	esterno $\boldsymbol{B_0}$. A temperatura corporea e con il tipico campo magnetico esterno usato nella clinica pratica  
+	esterno $\boldsymbol{B_0}$. A temperatura corporea e con il tipico campo magnetico esterno usato nella pratica clinica, vi è un'eccedenza (approssimativamente $10^{-6}$) di spin allo stato energetico più basso DOWN.
+	Questa lieve differenza nella distribuzione del'aggregato di spin genera una magnetizzazione macroscopica \textbf{M} che è all'origine del segnale MR. Questo è il motivo per cui una delle principali sfide della tecnologia MR
+	è quello di innalzare il segnale ed ottimizzare il \textit{singal-to-noise ratio} (SNR). Effettivamente più è alto l'SNR, più è l'informazione, la risoluzione spaziale ed una risoluzione temporale degli studi dinamici o con un tempo di
+	scansione più basso, nelle immagini cliniche finali. %traduzione un po' del cazzo qui
+	È importante sottolineare che all'aumentare di $\boldsymbol{B_0}$ aumenta anche l'intensità di \textbf{M}. Questa è la ragione per cui gli scanner MR si stanno evolvendo in dei sistemi con un $\boldsymbol{B_0}$ sempre più
+	ampio. Inoltre, l'intensità della magnetizzazione macroscopica \textbf{M}, che è generata quando il paziente viene inserito nel campo esterno $\boldsymbol{B_0}$, è proporzionale al numero di protoni nel volume tissutale.
+	Dal momento in cui la densità protonica (PD -- \textit{proton density}) varia fra tessuti differenti e può essere alterata dalla patolgia. La densità protonica è uno dei parametri utilizzati per generare contrasto nelle teniche di
+	imaging MR.
+	\subsubsection{Rilevamento del Segnale MR}
+	A differenza di altre tecniche di imaging (come la CT) nella quale il costrasto è essenzialmente basato sull'attenuazione dei raggi-X, la tecnica MRI usa molteplici parametri per la generazione di contrasto. La densità protonica
+	è una delle proprietà dei tessuti usate nella MR per generare contrasto, essendo la magnetizzazione macroscopica proporzionale al numero dei protoni presenti nel tessuto. Ulteriori parametri sono descritti in seguito.
+	\par Per rilevare in modo efficace la magnetizzazione macroscopica, si adotta la legge di Faraday. Essa afferma che la variazione temporale del campo magnetico induce una corrente in un conduttore elettrico. La 
+	magnetizzazione macroscopica \textbf{M} è inialmente orientata lungo l'asse di $\boldsymbol{B_0}$, nominato l'asse $z$, e pertanto solo la componente $M_z$ avrà un valore diverso da zero (Fig. 1.8a). Al fine di 
+	acquisire il segnale, l'orientamento di \textbf{M} viene cambiato tramite un impulso di radiofrequenza (RF) trasmesso da una bobina (Fig. 1.8b, c). Se l'impulso RF è uguale a quello di Larmor, allora corrisponde alla
+	frequenza di precessione degli spin intorno $\boldsymbol{B_0}$, ed il suo effetto è quello di ruotare \textbf{M} dall'asse $z$ verso il piano di $xy$ dell'angolo, chiamato angolo di flip (FA). I valori dell'angolo di flip
+	possono dipendere dalla durata dell'impulso RF. Di conseguenza, la componente \textbf{M} nel piano $xy$ ($M_{xy}$) non è più nulla. Oltretutto, non appena spostatosi dall'asse di $\boldsymbol{B_0}$, \textbf{M}
+	si comporta come un dipolo magnetico ed incomicia la sua precessione attorno l'asse $z$ con la frequenza Larmor $\omega_0$. Questo moto di \textbf{M} corrisponde ad un campo magnetico variabile nel tempo che
+	genera un segnale elettrico nella bobina. In pratica, per motivi tecnici, è la componente $M_{xy}$ di \textbf{M} ad essere in realtà rilevata dalla bobina di ricezione, quindi viene catturata ed analizzata.
+	\par L'effettiva misurazione dell'intensità di $M_{xy}$ è tuttavia resa difficile da piccoli fenomeni microscopici. Questi sono responsabili di altri parametri di contrasto intrinseci molto usati %idk here
+	oltre a quello della densità protonica già menzionato.
+	\subsubsection{Rilassamento dello Spin}
+	È importante sottolineare che la frequenza della pulsazione RF deve corrispondere alla frequenza Larmor. Qualunque altra frequenza non sarebbe efficace. Effettivamente, l'assorbimento della pulsazione RF da
+	parte del tessuto del paziente corrisponde all'energia di assorbimento dall'insieme degli spin. \par Da un punto di vista classico, la pulsazione RF corrisponde ad un campo magnetico più distante, chiamato
+	$\boldsymbol{B_1}$, che ruota alla stessa frequenza di \textbf{M}, e quindi capace di trasferire energia ad \textbf{M} e ruotarlo sul piano $xy$. \par Da un punto di vista meccanico-quantistico, portare lo
+	spin ad uno stato eccitatorio richiede il trasferimento di una precisa quantità di energia che corrisponde al divario energetico tra i livelli energetici di spin. Questa è esattamente l'energia di un'onda
+	elettromagnetica con frequenza Larmor. Il nome \textit{risonanza magnetica nucleare} si riferisce ad un trasferimento energetico verso un sistema attraverso precise oscillazioni periodiche, e in fisica questo
+	fenomeno è chiamato \textit{risonanza}. Il sistema che riceve energia è costituito dall'insieme degli spin dei nuclei di idrogeno all'interno del tessuto in fase di studio. \par Quando l'eccitazione dell'impulso RF
+	termina, il sistema tende naturalmente il ritorno al suo stato iniziale, attraverso un fenomeno noto come \textit{rilassamento}. \par Da un punto di vista macroscopico, il rilassamento dopo l'impulso RF può
+	essere rappresentato come la combinazione fra due componenti di \textbf{M}: il moto di precessione riguardo $\boldsymbol{B_0}$ che genera un movimento a spirale e descritto da $M_{xy}$ (la proiezione
+	di \textbf{M} sul piano $xy$), ed il ritorno di \textbf{M} lungo la direzione di $\boldsymbol{B_0}$, descritto da $M_z$ (la componente \textbf{M} lungo l'asse $z$) (Fig. 1.9a, b). Questi due componenti descrivono
+	meccanismi di rilassamento microscopici differenti. La componente longitudinale $M_z$ dipende dalle interazioni e dagli scambi di energia fra gli spin e la struttura molecolare (il ``reticolo''). $M_z$ ritorna in
+	equilibrio secondo la curva crescente nella Fig. 1.9a, caratterizzato dal parametro $T_1$, noto come \textit{tempo di rilassamento longitudinale}. Il tempo di rilassamento $T_1$ esprime il tempo che serve
+	per il recupero del 63\% del valore di magnetizzazione longitudinale $M_z$ prima dell'impulso RF. il tempo di rilassamento $T_1$ dipende dall'intensità del campo magnetico esterno $\boldsymbol{B_0}$ e dal 
+	movimento Browniano interno delle molecole. \par Il rilassamento della componente trasversale $M_{xy}$ dipende dalle stesso fenomeno che contribuisce al rilassamento $T_1$ e da altre interazioni atomiche e
+	molecolari inclusa l'interazione spin-spin. $M_{xy}$ ritorna in equilibrio secondo la curva decrescente in Fig. 1.9b, caratterizzata dal parametro $T_2$, noto come \textit{tempo di rilassamento trasversale}.
+	Il rilassamento $T_2$ esprime il tempo richiesto dalla magnetizzazione trasversale $M_{xy}$ per decadere al 37\% del suo valore iniziale immediatamente dopo la fine dello stato eccitatorio dell'impulso RF.
+	Il rilassamento $T_2$ è essenzialmente causato dalla perdita di coerenza di fase degli spin. In seguito alla pulsazione RF 90° gli spin inizieranno a precedere attorno all'asse di $\boldsymbol{B_0}$ tutti con 
+	la stessa fase, ma a causa dell'influenza di vicendevoli campi magnetici microscopici , ruotano con una frequenza di risonanza leggermente diversa e tendono ad essere fuori fase l'uno con l'altro, portando 
+	così ad una progressiva distruzione del segnale macroscopico nel piano $xy$. Come regola generale, $T_2$ è più basso nei tessuti solidi e più alto nei tessuti liquidi. \par Nel processo di misurazione realistico,
+	la perdita di coerenza di fase degli spin, di conseguenza il rilassamento di $M_{xy}$, può essere accelerata dalla presenza di campi magnetici locali, a causa di variazioni delle variazioni delle componenti tissutali
+	locali o una disomogeneità del campo magnetico esterno $\boldsymbol{B_0}$. Questo porta ad un decadimento più veloce di $M_{xy}$, con una curva simile al decadimento di $T_2$, ma definito dal parametro
+	$T_2*$%whatt 
+	, più corto di $T_2$. In conclusione $T_1$, $T_2$ (e parzialmente $T_2*$) sono parametri intrinseci dei tessuti, hanno valori differenti a seconda del tessuto e possono essere alterati dalla patologia e pertanto
+	forniscono una base solida per la creazione di immagini di contrasto. \par La tecnica MR è realizzata tramite la gestione degli impulsi RF ad un sistema e impiegando gradienti di campo magnetico, in precisi intervalli
+	di tempo chiamati \textit{sequenze}. \par Un'ampia varietà ed un numero in crescita di sequenze sono attualmente in uso, le quali permettono la creazione di immagini con caratteristiche geometriche 
+	e contrasti differenti. I principi della creazione ed ottimizzazione di sequenze di impulsi MR vanno oltre l'ambito di questo capitolo, %non saprei
+	in ogni caso i principi base delle sequenze MR ed i parametri principali utilizzati dall'operatore durante l'esame verrano espressi insieme alla spiegazione delle due sequenze le quali strutture sono la base di quasi
+	tutte le sequenze MR: spin echo e gradient echo (Weishaupt et al. 2008).
+	\subsubsection{Sequenze Spin Echo}
+	Questa è una delle famiglie di sequenze più utilizzate dato il loro eccellente valore SNR. \par Lo spin echo (Fig. 1.10) parte ad un impulso eccitatorio RF 90°, il quale ruota \textbf{M} di 90°, dall'asse $z$ al piano
+	$xy$. Appena l'impulso è  terminato, la componente $M_{xy}$ inizia a decadere con un rilassamento $T_2*$. Questo segnale è chiamato \textit{decadimento libero dell'induzione} (FID -- free induction decay)
+	e di nuovo, questo decadimento è più veloce in confronto al decadimento puro di $T_2$. Invece di acquisire il FID, dopo un intervallo di tempo TE/2, viene gestito un secondo impulso RF, chiamato impulso
+	RF 180° con direzione, intensità e durata precise, con l'obbiettivo di ruotare gli spin di 180° sul piano $xy$. Di conseguenza, dopo un altro intervallo di tempo TE/2, gli spin che erano fuori fase durante il
+	decadimento $T_2*$ saranno di nuovo in fase sul piano $xy$. L'acquisizione del segnale incomincia in questo momento. È importante sottolineare che l'impulso RF 180° è usato per recuperare il cambio di fase
+	degli spin dovuto a variazioni magnetiche locali del tessuto, mentre il cambio di fase dalle interazioni spin-spin non viene recuperato. Quindi, il segnale acquisito su TE sarà l'intensità della componente $M_{xy}$
+	decaduta secondo il tempo di rilassamento trasversale $T_2$ (non $T_2*$), ed è così chiamato segnale pesatura-$T_2$. \par Dato che il parametro $T_2$ è una caratteristica riferita al tessuto e può variare
+	in condizioni patologiche, attraverso la variazione dell'intervallo TE fra l'impulso RF 90° e l'impulso RF 180°, può essere generato un contrasto fra tessuti con tempi di decadimento $T_2$ differenti (Fig. 1.11).
+	\par Se la sequenza viene ripetuta più volte, come avviene di solito in ambienti clinici, è così possibile aggiungere l'effetto di un rilassamento $T_1$ al segnale. TR è il tempo che passa fra due ripetizioni di
+	sequenza consecutive. \par Di fatto, dopo il primo impulso RF 90°, mentre $M_{xy}$ si rilassa ed è parzialmente riportato sul piano $xy$ dall'impulso 180°, anche la componente $M_z$ si rilassa e ritorna
+	al valore iniziale secondo il rilassamento $T_1$. Quando viene dato l'impulso RF 90° seguente dopo la ripetizione di sequenze spin echo precedente, al tempo TR dal precedente impulso 90°, l'intensità di 
+	$M_z$ non sarà necessariamente il massimo valore $M_0$ (punto di partenza), ma avrà il valore raggiunto all'intervallo TR dall'inizio del recupero di $T_1$. \par Se TR ha un valore approssimativamente
+	più basso del valore di $T_1$ del tessuto considerato moltiplicato per 3, la componente $M_z$ non avrà abbastanza tempo per ritornare al suo valore massimo; Perciò il segnale acquisito dopo la seconda
+	ripetizione spin echo dipenderà da $T_1$. Questo permette la generazione di un contrasto basato sul tempo di rilassamento $T_1$ (Fig. 1.12). \par Fondamentalmente, la pesatura $T_2$ del segnale 
+	dipende dal parametro TE il quale è il tempo che intercorre fra la rotazione della magnetizzazione nel piano $xy$ e la sua acquisizione dopo il riorientamento. La pesatura $T_1$ dipende da TR, il tempo fra
+	una ripetizione di una sequenza completa e la prossima; Quindi, è il tempo rimasto per il sistema per riempire di nuovo il valore iniziale della componente $M_z$. \par Dal momento che i tessuti del paziente
+	hanno valori $T_1$ e $T_2$ differenti, e condizioni patologiche spesso modificano i tempi di rilassamento dei tessuti, allora variando in modo adatto TE e TR è possibile ottenere immagini anatomiche e 
+	diagnostiche con contrasti differenti, con pesatura $T_1$ o pesatura $T_2$, in base alla domanda diagnostica. Inoltre, i valori TE e TR possono essere selezionati per ridurre entrambi gli effetti differenti
+	di rilassamento$T_1$ e $T_2$ fra tessuti, ottenendo così immagini a densità protonica (Figure 1.13a--e e 1.14a--d).
+	\subsubsection{Sequenze Gradient Echo}
+	La seconda famiglia fondamentale di sequenze MR è basata sui gradient echo. \par In confronto alle spin echo, le sequenze gradient echo esprimono alcune differenze. Dopo l'impulso RF iniziale che sposta
+	\textbf{M} dall'asse $z$ verso il piano $xy$, il riorientamento della componente $M_{xy}$ prima dell'acquisizione è ottenuto attraverso l'uso di gradienti di campo magnetico invece che impulsi RF. I 
+	gradienti di campo magnetico sono di fatto una componente essenziale di una sequenza MR e sono inoltre coinvolti nell'acquisizione delle immagini. Questi sono campi magnetici esterni aggiuntivi,
+	adeguatamente alterati nelle caratteristiche di spazio e tempo, generati da specifiche bobine le quali sono posizionate attorno al magnete principale. Durante le sequenze, questi campi magnetici
+	aggiuntivi sono sovrapposti sul campo magnetico esterno costante $\boldsymbol{B_0}$. Nei gradient echo, l'inserzione di un campo gradiente appropriato dopo il primo impulso RF, insieme ad un 
+	gradiente inverso prima del segnale di acquisizione, permette il riorientamento della magnetizzazione sul piano $xy$. Tuttavia, in confronto allo spin echo, il segnale che è perduto a causa di variazioni locali
+	del campo magnetico non sarà recuperato ed il segnale acquisito sarà pesatura-$T_2*$. Questo rende le immagini gradient echo molto più sensibili ai cambiamenti nella predisposizione magnetica dei tessuti,
+	e potrebbe quindi generare artefatti in alcuni casi. D'altra parte, alcune caratteristiche possono fornire informazioni riguardo depositi con proprietà magnetiche speciali e di rilevanza clinica , come calio o 
+	emosiderina. \par Il vantaggio più notevole dell'imaging gradient echo è una generazione di immagini più rapida a differenza di spin echo. Infatti, gradient echo usa un FA minore di 90°, permettendo a
+	TR di decrescere in modo da ottenere un'acquisizione più rapida di immagine al costo di un segnale decrementato ed una qualità d'immagine inferiore (Fig. 1.15). La Figura 1.16 riassume i tratti distintivi del
+	segnale dei fluidi, tessuti adiposi e osso corticale, nel caso di sequenze spin echo.
+	\subsubsection{Ricostruzione dell'Immagine}
+	Come in ogni tecnica di imaging tomografica, l'imaging MR rappresenta volumi attraverso immagini 2D. Un voxel è un'unità elementare del volume di ogni regione anatomica sotto analisi, mentre il pixel è
+	l'unità elementare dell'immagine MR che rappresenta quella stessa regione anatomica. Un voxel ha tre dimensioni, mentre il pixel ha due dimensioni. Le regioni anatomiche possono essere divise in delle 
+	sezioni, ognuna contenente uno strato di voxels. Ogni sezione sarà rappresentata in una singola immagine bidimensionale e perciò il pixel può essere considerato come la rappresentazione bidimensionale
+	di un voxel (Fig. 1.17). La profondità del voxel corrisponderà quindi allo spessore della sezione, mentre il piano della sezione è una matrice composta da righe e colonne di singoli pixel.
+	\par La codifica spaziale nella MR è il processo per cui la posizione di una sorgente di segnale di un singolo voxel è identificato nello spazio. Come già menzionato, secondo l'equazione di Larmor, la
+	frequenza di precessione $\omega_0$ dello spin individuale è direttamente proporzionale all'intensità del campo magnetico statico $\boldsymbol{B_0}$, attraverso il rapporto giromagnetico $\gamma$,
+	una costante fisica tipica dell'elemento chimico a cui appartiene lo spin. Se l'intensità del principale campo magnetico $\boldsymbol{B_0}$ non è più costante ma varia progressivamente nello spazio
+	secondo un gradiente lineare \textit{G} anche la frequenza di precessione dello spin individuale varia linearmente nello spazio, permettendoci di identificare la posizione degli spin lungo la direzione del
+	gradiente, basata sulla loro frequenza di risonanza (Fig. 1.18). Il sistema di codifica spaziale per mezzo di gradienti perciò modula l'intensità del campo magnetico principale nello spazio attraverso 
+	bobine a gradiente che sono ulteriori conduttori di carica contenuti nel sostegno. La loro attivazione è responsabile dell'intenso rumore durante l'esame MR. \par Nel caso di sequenze 2D, così è come si
+	formano le immagini. La selezione della sezione è ottenuta tramite l'applicazione di gradiente di campo magnetico lineare lungo un asse, per esempio, sull'asse $z$. Quindi, lungo l'asse $z$, le frequenze
+	Larmor cambieranno gradualmente e per ogni sezione ci sarà una specifica risonanza. Ancora una volta, i protoni vengono eccitati solo da un impulso RF con una frequenza uguale alla loro frequenza
+	Larmor. Un impulso RF che corrisponde alla frequenza Larmor dei protoni localizzati nella sezione desiderata produrranno una reazione solo nei protoni di quella sezione e le sezioni rimanenti del corpo
+	anatomico saranno escluse dall'eccitamento. \par Dopo la scelta della sezione, le coordinate dei voxel sul piano $xy$ sono da identificare. La codifica su uno dei due assi, per esempio sull'asse $y$,
+	avviene attraverso l'azione di un gradiente di campo magnetico lungo l'asse su cui è situato in quel dato momento. Questo gradiente indurrà nuovamente una variazione della frequenza di risonanza 
+	dello spin lungo la direzione del gradiente, col risultato di un tasso di precessione differente. Quando il gradiente è spento, la frequenza di precessione sarà di nuovo la stessa per tutti gli spin, ma
+	al contempo gli spin hanno accumulato una differenza di fase, a causa della loro posizione lungo l'asse $y$. Questa è chiamata codifica di fase. La codifica su linee differenti richiede una ripetizione con
+	intensità di gradiente di fase differenti. \par Infine, la codifica lungo l'asse $x$ è ottenuta tramite l'applicazione di gradiente lungo l'asse $x$ durante il campionamento echo. Questo significa ottenere
+	simultaneamente tutte le frequenze che corrispondono alle posizioni degli spin lungo una linea parallela all'asse $x$. Perciò, nella sezione prescelta, le coordinate $xy$ di un voxel singolo saranno 
+	identificate basandosi sulla frequenza (coordinata $x$) e della fase (coordinata $y$) del segnale acquisito. \par In ultima analisi dopo la cattura di tutti i dati da ogni sezione, il risultato sarà un ammasso
+	di dati corrispondente all'intero volume di interesse. Questo set ordinato di segnali fornisce il \textit{k-space}, noto come \textit{spazio dei dati grezzi}. \par il \textit{k-space} non è uno spazio fisico
+	ma una matrice bidimensionale con dati numerici, ma i pixel non corrispondono direttamente l'uno con l'altro. Il \textit{k-space} contiene molte informazioni riguardo allo spazio reale che rappresenta, ma in 
+	una modalità in codice. I coefficienti $k$ più alti (corrispondenti alle frequenze di segnale più alte), i quali contribuiscono ai dettagli anatomici dell'imagine, sono posizionati nella parte periferica del
+	$k-space$. I coefficienti $k$ più bassi (corrispondenti alle frequenze di segnale più basse), i quali contribuiscono al contrasto dell'immagine, sono posizionati nell'area centrale (Fig. 1.19). Quando tutti
+	i punti del \textit{k-space} vengono catturati alla fine della scansione, i dati possono essere ricostruiti per generare l'immagine. Per passare dal \textit{k-space} (dati grezzi) all'immagine anatomica,
+	la quale è costituita da pixel con intensità differente in relazione alla posizione spaziale del voxel anatomico, è utilizzata un'operazione matematica: La traformata di Fourier. 
+	\par La risoluzione spaziale dell'immagine anatomica finale è data dallo spessore della sezione e, sul piano della sezione, dalla dimensione del campo visivo (FOV -- \textit{field of view}), dal numero di 
+	codifica di fasi (righe del \textit{k-space}) e dalle codifiche di frequenza (numero di punti acquisiti lungo una linea del \textit{k-space}). \par È importante sottolineare che l'SNR dell'immagine finale 
+	dipende oltretutto sulla quantità del tessuto contenuto nel voxel dal quale il segnale viene captato, e le sue dimensioni sono definite da una risoluzione spaziale scelta durante la prescrizione della
+	sequenza. Percò, quando tutti gli altri parametri sono uguali, l'aumento della risoluzione spaziale è di fatto limitata dal segnale MR intrinsecamente debole del tessuto. La ripetizione della sequenza
+	potrebbe aiutare all'accrescimento del parametro \textit{signal-to-noise}; tuttavia, questo può essere limitato dal movimento del corpo in esame e della durata dell'indagine.
+	\subsubsection{Acquisizione 2D e 3D}
+	L'acquisizione bidimensionale può essere a sezione singola o sezione multipla. Nella modalità a sezione singola, le sezioni sono completamente acquisite in successione. Nella tecnica a sezione
+	multipla invece, dopo l'acquisizione di una porzione di una sezione, il sistema passa alla sezione seguente per poi tornare al completamento della prima sezione solamente dopo. Questo permette 
+	di accorciare i tempi di acquisizione dato che, durante l'attesa fra l'eccitazione di una sezione e l'altra (TR), è possibile eccitare ed acquisire linee di \textit{k-space} di altre sezioni.
+	\par Le tecniche di acquisizione 3D hanno un SNR alto e sono sempre di più usate per la scansione di volumi con un'alta risoluzione spaziale in tutte le direzioni. I dati possono essere acquisiti e 
+	ricostruiti con qualunque orientamento nello spazio, permettendo la visione del volume di interesse su ogni piano, con voxel isotropici e con dettagli notevoli. Le acquisizioni 3D sono effettuate
+	tramite l'uso di un gradiente di fase aggiuntivo che permette la codifica di fase nella direzione della sezione. \par Dal momento che le direzioni spaziali sono codificate da gradienti di campo magnetico
+	creati da bobine inserite all'interno dello scanner, le acquisizioni MR, a differenza di altre tecniche di imaging, possono essere direttamente effettuate lungo piani obliqui. Infatti, un gradiente di campo
+	in una qualunque direzione obliqua può essere ottenuto dalla somma delle tre componenti, generate dalle bobine gradiente lungo gli assi Cartesiani definiti dalla geometria dello scanner. Con
+	l'acquisizione 3D, c'è inoltre la possibilità di riformattare i dati dopo l'acquisizione, lungo piani diversi dal piano di acquisizione. La buona qualità delle ricostruzioni multiplanari, le quali sono ottenute
+	su piani differenti dal piano di acquisizione, è ancora dovuto all'uso di voxel isotropici (uno con tre lati uguali).
+	\subsubsection{Tecniche di Acquisizione Rapida}
+	Nel corso degli anni, i sistemi clinici MR hanno fornito un numero in aumento di sequenze e tecniche, molte delle quali mirano alla riduzione dei tempi di acquisizione attraverso modalità differenti
+	di campionamento del \textit{k-space}. Di seguito vi è una breve descrizione delle più importanti, con riferimenti ad altri testi per un'analisi più approfondita (Weishaput et. al 2008; Elmaoĝlu e
+	Çelik 2012). \par Turbo spin echo (TSE), anche noto come spin echo rapido (FSE -- \textit{fast spin echo}), è una sequenza spin echo nella quale avvengono impulsi molteplici in seguito il primo
+	impulso 180°, ognuno dei quali genera un eco che è acquisito ed una ripetizione di sequenza riempie più righe del \textit{k-space}. La codifica di fase è ottenuta dal cambio su un gradiente di fase,
+	prima di ogni impulso 180° e dopo l'acquisizione dell'eco, ma con polarità inversa, per cancellare il cambio di fase e permettere una nuova codifica di fase prima del prossimo eco. I parametri
+	addizionali per questa sequenza sono eco train length (ETL, anche chiamato fattore turbo TF), che sono il numero di eco generati durante un TR, ed echo spacing (ESP), che è il tempo fra un 
+	eco e quello seguente, durante la ripetizione medesima della sequenza. In generale, l'acquisizione di tutto il \textit{k-space} richiederà meno ripetizioni di sequenza e quindi una notevole 
+	riduzione dei tempi di acquisizione. \par Alcune tecniche che sono attualmente in uso per ridurre i tempi di acquisizione consistono nel ridurre il numero di righe del \textit{k-space}, addirittura
+	al costo di un FOV rettangolare, con un pixel non più quadrato ma rettangolare, o applicando una riduzione dell'SNR, a seconda della tecnica. Il risultato sarà in ogni caso in linea alla qualità di 
+	immagine che è richiesta dal bisogno clinico. \par Un'altra strategia di acquisizione rapida del \textit{k-space} è l'EPI (echo planar imaging). In questo caso, la frequenza del gradiente alterna 
+	velocemente fra valori positivi e negativi. Ogni valore è associato ad una lettura d'eco e le linee del \textit{k-space} sono riempite in direzioni differenti in modo alternato. Con questa tecnica,
+	è inoltre possibile l'acquisizione dell'intero \textit{k-space} dopo un singolo impulso di eccitamento.
+	\subsubsection{Soppressione del Fat Signal}
+	I segnali nell'imaging MR sono principalmente generati da protoni di acqua contenuti nei tessuti. Tuttavia in diverse regioni anatomiche i segnali che provengono dai protoni del grasso avranno
+	un impatto eccessivo, con i pixel del tessuto grasso che appaiono in modo iperintenso. A causa di ciò, la valutazione clinica diventa più difficoltosa e possono essere generati degli artefatti.
+	\par Con l'obbiettivo della riduzione del fat signal, vengono utilizzate strategie differenti e sono indicate come teniche \textit{fat suppression}. Le sequenze cliniche spesso contengono uno
+	step di preparazione a contrasto preliminare per ridurre il fat signal. \par Una sequenza solitamente usata per il fat suppression è la STIR (short tau inversion recovery), la quale è una versione
+	più generale della sequenza IR (inversion recovery). \par Nella IR, prima dell'impulso 90° che sposta la magnetizzazione sul piano $xy$, è dato un impulso 180° che inverte la magnetizzazione
+	di 180° rispetto all'asse $z$. Alla fine dell'impulso 180°, la componente $M_z$ tenderà all'equilibrio secondo il rilassamento $T_1$, come già descritto. Dopo uno specifico intervallo, noto come
+	TI (inversion time), l'impulso 90° sarà generato all'avvio della sequenza descritta in precedenza (spin echo o gradient echo). L'utilità dell'impulso di inversione di 180° è dovuto al fatto che, 
+	quando ritorna all'equilibrio, segnali provenienti da tessuti con differenti $T_1$ attraverseranno il valore zero in tempi differenti. Attraverso un appropriata scelta del valore TI, è possibile
+	eliminare il segnale di un tessuto distribuendo l'impulso di eccitamento 90° quando la componente $M_z$ di quel tessuto è nulla, così il segnale sul piano $xy$, $M_{xy}$, non conterrà
+	la componente che viene eliminata. \par Nel caso delle sequenze STIR, il parametro di tempo TI è scelto in modo da eliminare il fat signal (Fig. 1.20). Un'altra tecnica (tecnica di saturazione
+	del grasso) per ridurre il fat signal è basata su frequenze di risonanza differenti fra protoni d'acqua e protoni di grasso. Precisamente, come menzionato in precedenza, il campo magnetico
+	locale percepito dagli spin dipende ulteriormente dalla struttra molecolare che li circonda, questo causa la frequenza di risonanza dei protoni che appartengono alle molecole di grasso è 
+	leggermente diversa da quella dei protoni legati alle molecole d'acqua, che sono strutturalmente differenti. La differenza di frequenza aumenta proporzionalmente al campo magnetico
+	esterno $\boldsymbol{B_0}$. Quindi, le tecniche di soppressione del fat signal le quali sono note come tecniche a frequenza selettiva, adoperano l'uso di un impulso di eccitamento iniziale 90°
+	solo sulla banda di frequenza del grasso, seguito dal cambio di fase nel piano $xy$, possibilmente accelerato da un gradiente di deterioramento. Dopodichè la componente $M_z$ disponibile
+	per l'acquisizione rimane solo quello per la componente dell'acqua che sarà il segnale primario dell'immagine generata con la seguente parte della sequenza. \par Un'altra importante tipologia 
+	di separazione dell'acqua è chiamata \textit{chemical shift imaging}. In questo caso, è impiegato il cambio fra il segnale d'acqua ed il fat signal. Dopo l'impulso 90°, il quale ruota
+	longitudinalmente la magnetizzazione nel piano $xy$, la componente magnetizzazione trasversale per grasso e acqua inizierà il suo moto di precessione con velocità differenti, e raggiungerà
+	il massimo del cambio di fase di 180° dopo un certo intervallo di tempo che viene scelto come TE (tempo di eco). Questo permetterà la creazione di un'immagine ``fuori-fase''. Dopo lo stesso
+	intervallo di tempo, i due componenti ritorneranno in fase, ed un'immagine ``in-fase'' della somma di segnali d'acqua e grasso può essere acquisita. Fra questi tipi di sequenze, la tecnica Dixon
+	è ampiamente utilizzata. Attraverso la combinazione delle immagini ``fuori-fase'' e ``in-fase'' pixe-su-pixel, solo immagini del segnale d'acqua e del segnale grasso sono ottenuto.
+	\par Le tecniche di soppressione del grasso sono estremamente utili nella diagnostica. Esse possono evidenziare piccole aree di edema, così come l'involuzione di un muscolo e tessuti critici.
+	La sostituzione di midollo osseo con infiltrazioni edematose possono essere individuate con la soppressione del fat signal. Questo può verificarsi nei processi di sovraccarico funzionale il quale 
+	risultato è il rimodellamento condilare regressivo, con l'edema del midollo osseo come uno dei primi segni dell'artrite dell'ATM (Fig. 1.21a). Con queste sequenze, le caratteristiche dei muscoli
+	sopramandibolari possono essere fattori di studio (Fig.1.21b). \par Infine, le cosiddette \textit{bande di saturazione} sono comunemente usate nella pratica clinica (Fig. 1.22). L'operatore 
+	disegna queste bande su un'immagine in corrispondenza delle regioni da dove il segnale dev'essere soppresso. L'obiettivo è generalmente l'eliminazione dei segnali di grasso notevoli e locali
+	da una regione vicino all'area di interesse, evitando così errori. In questo caso, gli impulsi RF 90° sono utilizzati in combinazione con gradienti di campo, convenientemente posizionati nello 
+	spazio così che le aree possano essere selezionate dove il segnale dev'essere saturato. Il segnale selezionato sarà ora nel piano $xy$ e sarà perciò non più disponibile lungo l'asse $z$, nel
+	momento in cui la sequenza di imaging partirà.
+	\subsubsection{Parametri e Ottimizzazione delle Sequenze}
+	La MRI si differenzia dalle scansioni CT e PET in quanto contrasto e risoluzione dipendono da molteplici parametri differenti -- alcuni intrinseci, altri estrinseci -- che si influenzano reciprocamente
+	in modo variabile, a seconda dell'anatomia e della sequenza scelta. Durante l'acquisizione, tutte le sequenze MR implicano una selezione di un certo numero di parametri estrinseci, in base al tipo 
+	di tessuto, il volume di interesse, SNR, riduzione di errori, campo magnetico, bobina da utilizzare, durata della procedura, contrasto desiderato e risoluzione (Manoliu et al. 2016). In aggiunta,
+	all'interno di un certo sistema o di una regione, i parametri sono intrecciati: cambiarne uno significa cambiarne altri, e la stessa risoluzione e contrasto può essere ottenuta con sequenze differenti
+	o con parametri differenti della stessa sequenza. Questa complessità richiede una costante ottimizzazione che prende forma in tre livelli diversi.
+	
 	
 	
 	
